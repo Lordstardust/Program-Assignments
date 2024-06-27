@@ -1,7 +1,6 @@
 # hero.py
 class Hero:
-    # We want our hero to have a default "starting_health",
-    # so we can set that in the function header.
+    
     def __init__(self, name, starting_health=100):
         '''Instance properties:
           name: String
@@ -21,8 +20,7 @@ if __name__ == "__main__":
     print(my_hero.current_health)
 # hero.py
 class Hero:
-    # We want our hero to have a default "starting_health",
-    # so we can set that in the function header.
+    
     def __init__(self, name, starting_health=100):
         '''Instance properties:
           name: String
@@ -98,3 +96,32 @@ if __name__ == "__main__":
     hero1.add_armor(Armor("Shield", 20))
     hero2.add_ability(Ability("Kick", 45))
     hero1.battle(hero2)
+
+class Hero:
+    
+
+    def add_weapon(self, weapon):
+        self.abilities.append(weapon)
+
+if __name__ == "__main__":
+    from weapon import Weapon
+
+    hero1 = Hero("Hero One")
+    hero1.add_weapon(Weapon("Sword", 100))
+    print(hero1.attack())
+
+class Hero:
+    def __init__(self, name, starting_health=100):
+        self.name = name
+        self.starting_health = starting_health
+        self.current_health = starting_health
+        self.abilities = []
+        self.armors = []
+        self.deaths = 0
+        self.kills = 0
+
+    def add_kill(self, num_kills):
+        self.kills += num_kills
+
+    def add_death(self, num_deaths):
+        self.deaths += num_deaths
