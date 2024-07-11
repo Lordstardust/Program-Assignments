@@ -11,10 +11,14 @@ class Arena:
         self.team_two = Team("Team Two")
 
     def create_ability(self):
-        name = input("What is the ability name? ")
-        max_damage = int(input("What is the max damage of the ability? "))
+        name = input("What is the ability name?  ")
+        max_damage = int(input("What is the max damage of the ability?  "))
         return Ability(name, max_damage)
 
     def create_weapon(self):
-        name = input("What is the weapon name? ")
-        max_damage =
+        name = input("What is the weapon name?  ")
+        max_damage = int(input("What is the max damage of the weapon?  "))
+        return Weapon(name, max_damage)
+
+    def create_armor(self):
+        name = input("What is the armor name
